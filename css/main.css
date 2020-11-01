@@ -5,6 +5,15 @@
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --border-radius: 0.35rem;
 }
+/* Cambiar el color de los elementos "a"*/
+a:hover{
+   color: #888;
+}
+a{
+    color: var(--text-color);
+    text-decoration:none;
+    transition:color .6s;
+}
 
 html {
     box-sizing: border-box;
@@ -104,11 +113,18 @@ body.dark-mode {
     gap: 2rem;
 }
 
+/*Genera box shadow al pasar el mouse sobre la tarjeta*/
+article.card:hover{
+    box-shadow: 0 0 10px;
+}
+
 .card {
     overflow: hidden;
     background-color: var(--color-bg-secondary);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    /*Genera un transicion que afecta al box-shadow*/
+    transition: box-shadow .8s linear;
 }
 
 .card img {
